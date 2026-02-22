@@ -29,7 +29,7 @@ import UIKit
 /// A PageController class which is able to show image or video
 public final class DarkRoomCarouselViewController: UIPageViewController {
 
-    public var shouldLayoutImageViewInViewDidLoad = false
+    private let shouldLayoutImageViewInViewDidLoad: Bool
 
     // MARK: - Dependencies
 
@@ -100,7 +100,7 @@ public final class DarkRoomCarouselViewController: UIPageViewController {
         imageLoader: DarkRoomImageLoader,
         initialIndex: Int = 0,
         configuration: DarkRoomCarouselConfiguration = DarkRoomCarouselDefaultConfiguration(),
-        shouldLayoutImageViewInViewDidLoad: Bool
+        shouldLayoutImageViewInViewDidLoad: Bool = false
     ) {
         self.initialIndex = initialIndex
         self.displayedIndex = initialIndex
